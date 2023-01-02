@@ -43,6 +43,7 @@ sample_res = """
 
 @app.route('/clone_data/')
 def clone_data():
+    page = request.args.get('page')
     # use_url = basic_url+ig_user_id+"?fields=business_discovery.username("+page+"){media{timestamp,comments_count,like_count,media_type}}&access_token="+access_token
     # req = requests.get(use_url)
     dict_content = json.loads(sample_res)
